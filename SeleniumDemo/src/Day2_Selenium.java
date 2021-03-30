@@ -12,6 +12,7 @@ public class Day2_Selenium {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Training\\Desktop\\chromedriver_win32\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		
+		
 		// Css selector Orange HRM's
 //		driver.get("https://opensource-demo.orangehrmlive.com/index.php/maintenance/purgeEmployee");
 //		driver.manage().window().maximize();
@@ -57,19 +58,73 @@ public class Day2_Selenium {
 		
 		//ICICI
 		driver.get("https://loan.icicibank.com/asset-portal-all/check-eligibility?loanType=al&WT.mc_id=Desk_OAPN_cms_cl_index_btn_applynow");
+		driver.manage().window().maximize();
 		driver.findElement(By.id("carRelspan")).click();
 		driver.findElement(By.xpath("//*[text()='New Car Loan']")).click();
 		driver.findElement(By.id("MOBILENUM")).sendKeys("9560188888");
 		driver.findElement(By.id("CUSTFIRSTNAME")).sendKeys("Manzar");
 		driver.findElement(By.id("CUSTLASTNAME")).sendKeys("Hussain");
-		Thread.sleep(2000);
+		Thread.sleep(500);
 		driver.findElement(By.id("CUSTCOMMUCITY")).sendKeys("jaipur");
-		Thread.sleep(2000);
+		Thread.sleep(500);
 		driver.findElement(By.id("CUSTCOMMUCITY")).sendKeys(Keys.DOWN);
-		Thread.sleep(2000);
+		Thread.sleep(500);
 		driver.findElement(By.id("CUSTCOMMUCITY")).sendKeys(Keys.ENTER);
+		driver.findElement(By.id("residancespan")).click();
+		driver.findElement(By.xpath("//*[text()='Owned']")).click();
+		driver.findElement(By.id("yrspan_mvce")).click();
+		driver.findElement(By.xpath("//*[text()='2018']")).click();
+		driver.findElement(By.id("mnthspan")).click();
+		driver.findElement(By.xpath("//*[text()='Jan']")).click();
+		driver.findElement(By.id("DATEOFBIRTH")).sendKeys("29091998");
+		Thread.sleep(500);
+//		WebElement radio1 = driver.findElement(By.cssSelector("input[value='No']"));
+//        radio1.click();
+        driver.findElement(By.id("CAR_MODEL_NAME")).sendKeys("Honda City");
+        Thread.sleep(500);
+        Thread.sleep(500);
+        driver.findElement(By.id("CAR_MODEL_NAME")).sendKeys(Keys.DOWN);
+		Thread.sleep(500);
+		driver.findElement(By.id("CAR_MODEL_NAME")).sendKeys(Keys.ENTER);
+        Thread.sleep(500);
+        driver.findElement(By.id("CITY_NAME")).sendKeys("Mumbai");
+        Thread.sleep(500);
+        driver.findElement(By.id("CITY_NAME")).sendKeys(Keys.DOWN);
+		Thread.sleep(500);
+		driver.findElement(By.id("CITY_NAME")).sendKeys(Keys.ENTER);
+        Thread.sleep(500);
+        driver.findElement(By.id("CAR_MODEL_PRIZE")).click();
+        Thread.sleep(500);
+        driver.findElement(By.id("selSalspan")).click();
+        Thread.sleep(500);
+        driver.findElement(By.xpath("//*[text()='Self Employed Professional']")).click();
+        Thread.sleep(500);
+        
+        driver.findElement(By.id("NAME_OF_BUSSINESS")).sendKeys("Jk Jewellers");
+		Thread.sleep(500);
+		driver.findElement(By.id("Nobspan")).click();
+		driver.findElement(By.xpath("//*[text()='MANUFACTURING']")).click();
+	    Thread.sleep(500);
+	    driver.findElement(By.id("yrspan_sdb")).click();
+	    driver.findElement(By.linkText("2017")).click();
+	    Thread.sleep(500);
+	    driver.findElement(By.id("mnthspan_1")).click();
+	    driver.findElement(By.linkText("Jan")).click();
+	    Thread.sleep(500);
+	    driver.findElement(By.id("totalworkexp_1")).click();
+	    driver.findElement(By.linkText("3")).click();
+	    Thread.sleep(500);
+	    driver.findElement(By.id("LATEST_Y_GROSS_T_INC")).sendKeys("1200000");
+	    Thread.sleep(500);
+        driver.findElement(By.id("TOTAL_CURR_EMI_PAID")).sendKeys("100000");
+//        Thread.sleep(500);
+//        WebElement radio2 = driver.findElement(By.id("relwithBankNo"));
+//        radio2.click();
+        Thread.sleep(500);
+        driver.findElement(By.id("eligibility-btn")).click();
+        
 
-//		
+
 		
 		// Slider
 		//-----------------------Emi Calculator
